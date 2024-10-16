@@ -5,6 +5,8 @@ import Home from './components/Home'
 import About from './components/About'
 import Service from './components/Service'
 import PageNotFound from './components/PageNotFound'
+import List from './components/List'
+import ListIem from './components/ListItem'
 
 
 const App = () => {
@@ -17,6 +19,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
+          <Route path='/item' element={<List/>}/>
+          <Route path='/item/:i' element={<ListIem/>}/>
           <Route path="*" element={<PageNotFound />} />
         </Route>
 

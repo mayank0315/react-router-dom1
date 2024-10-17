@@ -12,17 +12,17 @@ import ListIem from './components/ListItem'
 const App = () => {
   return (
     <div className='p-10 bg-zinc-300 w-[70%] m-auto mt-5'>
-      <Nav/>
-      
+      <Nav />
+
       <Routes>
-        <Route>
+        
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
-          <Route path='/item' element={<List/>}/>
-          <Route path='/item/:i' element={<ListIem/>}/>
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
+          <Route path='/item' element={<List />}>
+            <Route path='/item/:i' element={<ListIem />} />
+          </Route>
+            <Route path="*" element={<PageNotFound />} />
 
       </Routes>
 
